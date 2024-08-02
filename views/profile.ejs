@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .profile-header p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .actions {
+            margin-top: 20px;
+        }
+        .actions a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .actions a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <div>
+                <h1>Name: <%= user.name %></h1>
+                <p>Email: <%= user.email %></p>
+                <p>Status: <%= user.status %></p>
+            </div>
+        </div>
+        <div class="actions">
+            <a href="/create/address">Add Address</a> | 
+            <a href="/address">User List</a> | 
+            <a href="/users/logout">Log Out</a>
+        </div>
+    </div>
+</body>
+</html>
